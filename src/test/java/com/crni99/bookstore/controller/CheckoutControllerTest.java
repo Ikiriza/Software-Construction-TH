@@ -109,6 +109,7 @@ class CheckoutControllerTest {
 		when(shoppingCartService.getCart()).thenReturn(cart);
 
 		RedirectAttributes redirect = mock(RedirectAttributes.class);
+		@SuppressWarnings("null")
 		BindingResult bindingResult = new BeanPropertyBindingResult(null, null);
 		bindingResult.addError(error);
 		String result = checkoutController.placeOrder(customer, bindingResult, redirect);
